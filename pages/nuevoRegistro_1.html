@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Poner esto en el css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="./../css/estilo.css">
+
+    <title>Login</title>
+</head>
+<body>
+    <section class="fondo_verde">
+        <header class="header">
+            <div class="logo">
+                <a href="http://www.constructoradelvalle.com/veneto-village/">
+                    <img id="imgLogo" src="./../img/logo-veneto.png" alt="Logo Veneto Village">
+                </a>
+            </div>
+            <h1 class="titulo">Sistema de Gestion de Consumos</h1>
+            <nav class="link home">
+                <a class="link home" href="./../index.html">Home</a>
+            </nav>
+        </header>
+    </section>
+    <form class="formularioReg" action="">
+        <h2 class="subtitulo">Nuevo Registro</h2>
+
+        <label class="fechaIngreso" for="fechaIngreso">Fecha de Ingreso</label>
+        <input class="inputFechaIngreso" type="date" name="fechaIngreso" required>
+
+        <label class="fechaSalida" for="fechaSalida">Fecha de Salida</label>
+        <input class="inputFechaSalida" type="date" name="fechaSalida" required>
+
+        <label class="cantPersonas" for="cantPersonas">Cantidad de Huespedes</label>
+        <input class="inputCantPersonas" type="number" name="cantPersonas" required>           
+
+        <button class="botonSiguiente" type="submit" value="Siguiente"><a href="./error.html">Siguiente</a></button>
+    </form>
+</body>
+</html>

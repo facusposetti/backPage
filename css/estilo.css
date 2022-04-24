@@ -1,0 +1,273 @@
+/* ---->Quitamos Formato */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* ----> links comunes */
+.link{
+    padding: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+/* ----> Grid header */
+.fondo_verde{
+    background-color: rgb(78, 161, 53);
+}
+.header{
+    display: grid;
+    width: 100%;
+    height: 15vh;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo titulo titulo login";
+    justify-items: center;
+    align-items: center;
+}
+.logo{
+    grid-area: logo;
+}
+#imgLogo{
+    width: 200px;
+}
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+    color: white;
+}
+.login,.home{
+    grid-area: login;
+    text-align: right;
+    justify-self: right;
+    text-decoration: overline 3px;
+}
+.login:hover,.home:hover{
+    color: black;
+    text-decoration: overline 3px;
+}
+
+/* ----> Grid Botones */
+.botones{
+    display: grid;
+    width: 100%;
+    padding: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nuevoRegistro reemplazarPulceras estadoCliente";
+    gap: 4rem;
+    align-items: auto;
+}
+.card{
+    width: auto;
+    height: 35vh;
+    border: 18px;
+    padding-top: 30%;
+    background-color: rgb(8, 120, 180);
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.2rem;
+}
+.card:hover{
+    background-color: rgb(85, 145, 176);
+}
+.nuevoRegistro{
+    grid-area: nuevoRegistro;
+}
+.reemplazarPulceras{
+    grid-area: reemplazarPulceras;
+}
+.estadoCliente{
+    grid-area: estadoCliente;
+}
+
+/* ---->login */
+.formularioLogin{
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px auto;
+    display: grid;
+    width: 100%;
+    height: 30vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:    "subtitulo subtitulo"
+                            "usuario nombreUsuario"
+                            "contra insertarContra"
+                            "botonLogin botonRegistro"
+}
+.subtitulo{
+    grid-area: subtitulo;
+}
+.usuario{
+    grid-area: usuario;
+    text-align: right;
+}
+.nombreUsuario{
+    grid-area: nombreUsuario;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+}
+.contra{
+    grid-area: contra;
+    text-align: right;
+}
+.insertarContra{
+    grid-area: insertarContra;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.botonLogin{
+    grid-area: botonLogin;
+    width: 50%;
+    justify-self: right;
+    border-radius: 15px;
+}
+.botonRegistro{
+    grid-area: botonRegistro;
+    width: 50%;
+    justify-self: left;
+    border-radius: 15px;
+}
+.botonRegistro a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---->Nuevo Registro */
+.formularioReg{
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px auto;
+    display: grid;
+    width: 100%;
+    height: 30vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:    "subtitulo subtitulo"
+                            "fechaIngreso inputFechaIngreso"
+                            "fechaSalida inputFechaSalida"
+                            "cantPersonas inputCantPersonas"
+                            "botonSiguiente botonSiguiente";
+}
+.subtitulo{
+    grid-area: subtitulo;
+}
+.fechaIngreso{
+    grid-area: fechaIngreso;
+    text-align: right;
+}
+.inputFechaIngreso{
+    grid-area: inputFechaIngreso;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+}
+.fechaSalida{
+    grid-area: fechaSalida;
+    text-align: right;
+}
+.inputFechaSalida{
+    grid-area: inputFechaSalida;
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.cantPersonas{
+    grid-area: cantPersonas;
+    justify-self: right;
+}
+.inputCantPersonas{
+    grid-area: inputCantPersonas;
+    width: 50%;
+    justify-self: left;
+    border-radius: 15px;
+    text-align: center;
+}
+.botonSiguiente{
+    grid-area: botonSiguiente;
+    width: 50%;
+    justify-self: center;
+    border-radius: 15px;
+}
+.botonSiguiente a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ---->Pagina de error */
+.error{
+    margin: 15px auto;
+    border-top: 30px;
+    text-align: center;
+}
+.error img{
+    width: 300px;
+}
+
+/* ---->Responsive */
+@media screen and (max-width: 500px){
+    /* ----> headers */
+    .header{ 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "logo logo"
+                             "titulo login";
+    }
+    .header h1{
+        font-size: 1.2rem;
+    }
+    .header .home, .header .login{
+        font-size: 1rem;
+    }
+    
+    /* ----> botones login */
+    .botones{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "nuevoRegistro"
+                             "reemplazarPulceras" 
+                             "estadoCliente";
+        gap: 1rem;
+    }
+    .botones .card{
+        height: 15vh;
+        padding-top: 15%;
+        gap: 5px;
+        border: 5px;
+    }
+
+    /* ----> Login */
+    .formularioLogin{
+        grid-template-columns: 1fr ;
+        grid-template-rows: repeat(7,1fr);
+        gap: 20px;
+        grid-template-areas:    "subtitulo"
+                                "usuario"
+                                "nombreUsuario"
+                                "contra"
+                                "insertarContra"
+                                "botonLogin"
+                                "botonRegistro"
+    }
+    .usuario, .nombreUsuario, .contra, .insertarContra, .botonLogin, .botonRegistro{
+        text-align: center;
+        justify-self: center;
+    }
+    
+}
